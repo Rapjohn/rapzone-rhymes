@@ -1,0 +1,252 @@
+.search-results-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  padding: 16px;
+}
+
+.search-results-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+.search-input-results {
+  flex: 1;
+  border: 1.5px solid var(--neon-blue);
+  border-radius: 18px;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 700;
+  background-color: transparent;
+  outline: none;
+}
+
+.search-input-results::placeholder {
+  color: #555;
+}
+
+/* Languages Tabs */
+.languages-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-vertical: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+}
+
+.languages-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.languages-tabs::-webkit-scrollbar-thumb {
+  background: var(--neon-blue);
+  border-radius: 2px;
+}
+
+.lang-tab {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: 1.5px solid var(--neon-blue);
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.lang-tab:hover {
+  border-color: var(--neon-red);
+}
+
+.lang-tab-active {
+  border-color: var(--neon-red);
+  background-color: var(--neon-red-opaque);
+}
+
+.lang-tab-text {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+
+.lang-tab-active .lang-tab-text {
+  color: var(--neon-red);
+}
+
+.lang-count {
+  color: var(--neon-red);
+  font-weight: bold;
+}
+
+/* Rhyme Type Tabs */
+.rhyme-type-tabs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+}
+
+.rhyme-type-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.rhyme-type-tabs::-webkit-scrollbar-thumb {
+  background: var(--neon-red);
+  border-radius: 2px;
+}
+
+.rhyme-type-tab {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1.5px solid var(--neon-red);
+  background: transparent;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.rhyme-type-tab:hover {
+  background-color: var(--neon-red-opaque);
+}
+
+.rhyme-type-active {
+  background-color: var(--neon-red-opaque);
+  color: var(--neon-red);
+}
+
+/* Rhymes List */
+.rhymes-list {
+  margin-bottom: 30px;
+}
+
+.rhyme-item {
+  border: 1.5px solid var(--neon-blue);
+  padding: 14px;
+  margin-vertical: 6px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-very-dark);
+  transition: all 0.3s ease;
+}
+
+.rhyme-item:hover {
+  background-color: var(--gray-dark);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.rhyme-info {
+  flex: 1;
+}
+
+.rhyme-word {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--white);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.rhyme-pos {
+  font-size: 11px;
+  color: var(--neon-red);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rhyme-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+}
+
+.no-results {
+  color: var(--gray-light);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Advanced Filters Button */
+.advanced-filters-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px solid var(--neon-blue);
+  padding: 14px 20px;
+  border-radius: 25px;
+  background: transparent;
+  color: var(--neon-blue);
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.advanced-filters-btn:hover {
+  background-color: var(--neon-blue-opaque);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .search-results-container {
+    padding: 12px;
+  }
+
+  .rhyme-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rhyme-actions {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+}
